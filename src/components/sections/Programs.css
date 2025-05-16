@@ -1,9 +1,11 @@
 .programs {
   padding: 6rem 0;
-  background-color: var(--white);
+  background-color: var(--light-bg);
 }
 
-.container {
+.programs .container {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -176,7 +178,7 @@
   .program-tabs {
     gap: 0.5rem;
   }
-  
+
   .tab-button {
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
@@ -187,11 +189,11 @@
   .programs-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .section-header h2 {
     font-size: 2rem;
   }
-  
+
   .programs {
     padding: 4rem 0;
   }

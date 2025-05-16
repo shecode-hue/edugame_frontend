@@ -74,10 +74,16 @@ const Programs = () => {
     { id: 'board-games', label: 'Board Games' },
   ];
 
-  const filteredPrograms =
-    activeTab === 'all'
-      ? programs
-      : programs.filter((program) => program.category === activeTab);
+  // Get filtered programs based on the active tab
+  const getFilteredPrograms = () => {
+    if (activeTab === 'all') {
+      return programs;
+    } else {
+      return programs.filter((program) => program.category === activeTab);
+    }
+  };
+
+  const filteredPrograms = getFilteredPrograms();
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -133,41 +139,50 @@ const Programs = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
+          key={activeTab} // Add a key to force re-render when tab changes
         >
-          {filteredPrograms.map((program) => (
-            <motion.div
-              key={program.id}
-              className="program-card"
-              variants={itemVariants}
-            >
-              <div className="program-header">
-                <h3>{program.title}</h3>
-                <span className="level-badge">{program.level}</span>
-              </div>
-              <div className="program-details">
-                <div className="program-info">
-                  <p className="price">{program.price}</p>
-                  <p>
-                    <strong>Schedule:</strong> {program.schedule}
-                  </p>
-                  <p>
-                    <strong>Duration:</strong> {program.duration}
-                  </p>
-                  <p>
-                    <strong>Ages:</strong> {program.ageRange}
-                  </p>
+          {filteredPrograms.length > 0 ? (
+            filteredPrograms.map((program) => (
+              <motion.div
+                key={program.id}
+                className="program-card"
+                variants={itemVariants}
+              >
+                <div className="program-header">
+                  <h3>{program.title}</h3>
+                  <span className="level-badge">{program.level}</span>
                 </div>
-                <div className="program-requirements">
-                  <p>
-                    <strong>Requirements:</strong> {program.requirements}
-                  </p>
+                <div className="program-details">
+                  <div className="program-info">
+                    <p className="price">{program.price}</p>
+                    <p>
+                      <strong>Schedule:</strong> {program.schedule}
+                    </p>
+                    <p>
+                      <strong>Duration:</strong> {program.duration}
+                    </p>
+                    <p>
+                      <strong>Ages:</strong> {program.ageRange}
+                    </p>
+                  </div>
+                  <div className="program-requirements">
+                    <p>
+                      <strong>Requirements:</strong> {program.requirements}
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <Button to="/enroll" variant="primary" className="enroll-button">
-                Enroll Now
-              </Button>
-            </motion.div>
-          ))}
+                <Button
+                  to="/enroll"
+                  variant="primary"
+                  className="enroll-button"
+                >
+                  Enroll Now
+                </Button>
+              </motion.div>
+            ))
+          ) : (
+            <p>No programs found for this category.</p>
+          )}
         </motion.div>
       </div>
     </section>
@@ -175,4 +190,3 @@ const Programs = () => {
 };
 
 export default Programs;
-            
