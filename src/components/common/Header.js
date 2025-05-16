@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
 import { motion } from 'framer-motion';
+import logoImage from '../../assets/images/logo.png';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,29 +28,14 @@ const Header = () => {
         <div className="header-content">
           <Link to="/" className="logo-container">
             <div className="logo">
-              <motion.svg
-                width="40"
-                height="40"
-                viewBox="0 0 40 40"
-                fill="none"
+              <motion.img
+                src={logoImage}
+                alt="Edu-Game Namibia Logo"
                 initial={{ rotate: 0 }}
                 animate={{ rotate: 360 }}
                 transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
-              >
-                <circle
-                  cx="20"
-                  cy="20"
-                  r="18"
-                  stroke="#ffa404"
-                  strokeWidth="4"
-                />
-                <path
-                  d="M20 10V30M10 20H30"
-                  stroke="#ffa404"
-                  strokeWidth="4"
-                  strokeLinecap="round"
-                />
-              </motion.svg>
+                style={{ width: '40px', height: '40px' }}
+              />
             </div>
             <h1 className="site-name">Edu-Game Namibia</h1>
           </Link>
