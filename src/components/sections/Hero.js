@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Button from '../common/Button';
+import HeroImage from '../../assets/images/hero.webp';
 import './Hero.css';
 
 const Hero = () => {
@@ -63,10 +64,7 @@ const Hero = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <img
-              src="/api/placeholder/500/400"
-              alt="Kids learning game development"
-            />
+            <img src={HeroImage} alt="Kids learning game development" />
           </motion.div>
         </div>
       </div>
