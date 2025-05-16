@@ -1,0 +1,155 @@
+/* ParentPortal.css */
+.parent-portal-section {
+  padding: 80px 0;
+  background-color: var(--white);
+}
+
+.parent-portal-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.parent-portal-content {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.parent-portal-text {
+  flex: 1;
+}
+
+.parent-portal-image {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.section-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 20px;
+}
+
+.section-description {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--gray);
+  margin-bottom: 25px;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+.feature-list li {
+  font-family: 'Poppins', sans-serif;
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: var(--dark);
+}
+
+.feature-list li:before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--white);
+  border: 2px solid var(--primary);
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: var(--primary);
+}
+
+/* Portal device styling */
+.portal-device {
+  width: 450px;
+  height: 300px;
+  background-color: var(--dark);
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.portal-screen {
+  width: 100%;
+  height: 100%;
+  background-color: var(--white);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.portal-ui {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.portal-header {
+  height: 40px;
+  background-color: var(--primary);
+}
+
+.portal-content {
+  flex: 1;
+  display: flex;
+}
+
+.portal-sidebar {
+  width: 80px;
+  background-color: var(--light-gray);
+}
+
+.portal-main {
+  flex: 1;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.portal-card {
+  height: 60px;
+  background-color: var(--light-bg);
+  border-radius: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .parent-portal-content {
+    flex-direction: column;
+  }
+  
+  .parent-portal-text {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .feature-list li {
+    text-align: left;
+  }
+  
+  .portal-device {
+    width: 100%;
+    max-width: 450px;
+  }
+}
