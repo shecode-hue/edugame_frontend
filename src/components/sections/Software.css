@@ -18,7 +18,7 @@
   font-weight: 700;
   text-align: center;
   color: var(--dark);
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   position: relative;
 }
 
@@ -48,13 +48,13 @@
   padding: 10px 10px;
 
   text-align: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .software-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 13px 25px rgba(0, 0, 0, 0.1);
 }
 
 .software-icon {
@@ -64,11 +64,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--primary);
+  background-color: var(--light-bg);
   border-radius: 50%;
-  color: var(--primary);
-  font-size: 2rem;
 }
+
+.software-image {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
 
 .software-name {
   font-family: 'Poppins', sans-serif;

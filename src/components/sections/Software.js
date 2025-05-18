@@ -1,32 +1,32 @@
 import React from 'react';
 import './Software.css';
+import Roblox from '../../assets/images/roblox.png';
+import StopMotion from '../../assets/images/stopmotion.png';
+import Unity from '../../assets/images/unity.png';
+import Krita from '../../assets/images/krita.png';
+import Blender from '../../assets/images/blender.png';
 
 const Software = () => {
   const softwareTools = [
     {
       name: 'Roblox Studio',
-
-      icon: 'game-controller',
+      image: Roblox,
     },
     {
       name: 'Blender',
-
-      icon: 'cube',
+      image: Blender,
     },
     {
       name: 'Stop Motion Studio',
-
-      icon: 'film',
+      image: StopMotion,
     },
     {
       name: 'Unity for XR',
-
-      icon: 'glasses',
+      image: Unity,
     },
     {
       name: 'Krita',
-
-      icon: 'brush',
+      image: Krita,
     },
   ];
 
@@ -38,7 +38,11 @@ const Software = () => {
           {softwareTools.map((tool, index) => (
             <div className="software-card" key={index}>
               <div className="software-icon">
-                <i className={`icon-${tool.icon}`}></i>
+                <img
+                  src={tool.image}
+                  alt={tool.name}
+                  className="software-image"
+                />
               </div>
               <h3 className="software-name">{tool.name}</h3>
             </div>
