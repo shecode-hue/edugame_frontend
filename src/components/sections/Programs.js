@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { CalendarClock, DollarSign, Hourglass, Users } from 'lucide-react';
 import Button from '../common/Button';
 import './Programs.css';
 
@@ -139,7 +140,7 @@ const Programs = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          key={activeTab} // Add a key to force re-render when tab changes
+          key={activeTab} 
         >
           {filteredPrograms.length > 0 ? (
             filteredPrograms.map((program) => (
@@ -154,15 +155,21 @@ const Programs = () => {
                 </div>
                 <div className="program-details">
                   <div className="program-info">
-                    <p className="price">{program.price}</p>
-                    <p>
-                      <strong>Schedule:</strong> {program.schedule}
+                    <p className="info-line">
+                      <DollarSign size={18} className="home-info-icon" />
+                      {program.price}
                     </p>
-                    <p>
-                      <strong>Duration:</strong> {program.duration}
+                    <p className="info-line">
+                      <CalendarClock size={18} className="home-info-icon" />
+                      {program.schedule}
                     </p>
-                    <p>
-                      <strong>Ages:</strong> {program.ageRange}
+                    <p className="info-line">
+                      <Hourglass size={18} className="home-info-icon" />
+                      {program.duration}
+                    </p>
+                    <p className="info-line">
+                      <Users size={18} className="home-info-icon" />
+                      {program.ageRange}
                     </p>
                   </div>
                   <div className="program-requirements">

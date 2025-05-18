@@ -18,7 +18,7 @@ const ParentPortal = () => {
               <li>Communicate with instructors</li>
               <li>Manage billing and payments</li>
             </ul>
-            <a href="/portal" className="btn btn-primary">
+            <a href="/portal" className="btn pp-btn-primary">
               Access Portal
             </a>
           </div>
