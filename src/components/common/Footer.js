@@ -14,7 +14,7 @@ const Footer = () => {
               Empowering young minds through game development and creative
               technology education.
             </p>
-            <div className="social-links">
+            <div className="footer-social-links">
               <a
                 href="https://facebook.com"
                 target="_blank"
@@ -64,7 +64,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="footer-column programs">
+          <div className="footer-column footer-programs">
             <h4>Programs</h4>
             <ul>
               <li>
@@ -82,10 +82,10 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="footer-column newsletter">
+          <div className="footer-column footer-newsletter">
             <h4>Newsletter</h4>
             <p>Subscribe to our newsletter for updates and special offers.</p>
-            <form className="newsletter-form">
+            <form className="footer-newsletter-form">
               <input type="email" placeholder="Your email address" />
               <button type="submit" className="btn btn-primary">
                 Subscribe
