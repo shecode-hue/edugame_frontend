@@ -22,7 +22,7 @@ const ParentPortal = () => {
               Access Portal
             </a>
           </div>
-          <div className="parent-portal-image">
+          {/* <div className="parent-portal-image">
             <div className="portal-device">
               <div className="portal-screen">
                 <div className="portal-ui">
@@ -38,7 +38,7 @@ const ParentPortal = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
